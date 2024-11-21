@@ -1,0 +1,801 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+.logo{
+    font-family: "Pacifico", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }
+/* ######################## utility classes############################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.btn{
+    display: inline-block;
+
+    border-radius: 50px;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    margin-top: 1em;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    background-color: #16a083;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-primary:hover{
+    background-color: #128068;
+}
+.logo{
+    font-family: "Pacifico", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }
+/* ############################### navbar styling ########################### */
+
+/* for desktop mode  */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.pages-all{
+    display: flex;
+    justify-content: space-evenly;
+    height: 64px;
+    align-items: center;
+    width: 50%;
+}
+
+
+
+.navbar .menu-items{
+    text-decoration: none;
+    order: 2;
+    display: flex;
+}
+
+
+
+.menu-items li,.sign-in{
+    list-style: none;
+    margin: 1.5rem;
+    font-size: 1.8rem;
+}
+
+
+
+.logo{
+    order: 1;
+    font-size: 3rem;
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 99;
+}
+
+
+
+.navbar li a,.sign-in a{
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    /* font-weight: 600; */
+}
+.sign-in a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.sign-in{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.sign-in .adj{
+    padding: 4px;
+}
+.navbar li a:hover{
+    color: #117964;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* ########################### showcase area ############################### */
+.showcase-area{
+    height: 50vh;
+    background:linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.336)), url(../images/header-image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+
+.showcase-container h1{
+    text-transform: uppercase;
+}
+/* ############################# About Us ############################# */
+#about{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+#about .small{
+    font-weight: 600;
+    color: #666 ;
+    font-size: 1.6rem;
+}
+.about-image img{
+    height: 400px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+}
+.about-image{
+    order: 2;
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translate(150%);
+    animation: about-image-animation 1s ease-in-out forwards;
+}
+@keyframes about-image-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-wrapper{
+    display: flex;
+
+}
+.about-text{
+    order: 1;
+    margin: auto;
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+/* ######################## Types of food ############################## */
+
+#food{
+    margin: 20px;
+    margin-bottom: 4rem;
+}
+#food h2{
+    text-align: center;
+    font-size: 3.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+}
+.food-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    justify-content: space-between;
+}
+.img-container img{
+    display: block;
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+    /* width: 25%; */
+}
+
+.img-container .img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content{
+    padding-top: 3rem;
+}
+.img-container h3{
+    font-size: 3rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+.img-content p{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.img-content a{
+    font-size: 1.2rem;
+}
+.img-content h2{
+    font-size: 1rem;
+}
+.category-heading{
+    font-family: "Caveat", cursive;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 0px 0px 2rem 2rem;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    /* font-style: italic; */
+}
+.img-container {
+    position: relative;
+    /* transition: width 0.3s ease; */
+}
+
+.category-heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 0 0 20px 20px; 
+}
+.arrows{
+    display: flex;
+    justify-content: center;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #fff;
+  }
+.img-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width:100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    background: rgba(0,0,0,0.817);
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 50% 50%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.img-container{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.img-container:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+
+/* ############################### deals section styling ########################### */
+#deals{
+    background-color: #f5f5f7;
+}
+#deals h2{
+    text-align: center;
+    font-size: 3.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+}
+.carousel-inner{
+    position: relative;
+}
+.carousel-slide img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    /* position: absolute; */
+    /* border-radius: 20px; */
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 600px; Adjust as needed */
+    margin: auto;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    overflow: hidden;
+    
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    display: none;
+  }
+  
+  .carousel-slide img:first-child {
+    display: block;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+  }
+  
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+  
+
+
+/* ############################### category-navbar styling ########################### */
+.category-nav a:hover{
+    color: #117964;
+    text-decoration: underline;
+    font-weight: 700;
+}
+.menufull{
+
+    padding: 5rem 0rem;
+    background: rgb(244, 243, 243);
+   
+} */
+/* .align{
+    padding: 5rem 0rem;
+    background: rgb(243,243,243);
+    border: 2px solid black;
+} */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.align{
+    margin: 60px;
+    display: flex;
+}
+.category-nav{
+    align-items: left;
+    width: 20%;
+    
+    
+    margin-left: 100px;
+}
+
+
+.category-navigation{
+    /* margin-top: 30px; */
+    position: fixed;
+    /* width: 30%; */
+}
+.categoryh1{
+    font-size: 3.2rem;
+}
+li{
+    display: flex;
+    flex-direction: column;
+}
+li ul{
+    list-style: none;
+}
+li ul a{
+    color: #444;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 2rem;
+    font-weight: 500;
+}
+li ul a:active{
+    color: #000;
+}
+/* ############################### menu items styling ########################### */
+.menu-heading{
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    border-bottom:2px solid black ;
+}
+/* .img-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px 20px 0 0 ;
+    object-fit: cover;
+    object-position: center;
+}
+.img-content{
+    width: 250px;
+    padding: 10px; */
+    /* border: 2px solid black; */
+    /* border-radius: 0 0 20px 20px;
+    /* text-align: center; */
+
+    /* background-color: #f5f5f5;
+} */ 
+/* .img-content h3{
+    font-size: 2rem;
+} */
+
+.menu-items{
+    width: 80%;
+}
+
+.img-content .cost{
+    color: #fff;
+    font-weight: 550;
+    font-size: 2rem;
+    /* border: 2px solid black; */
+}
+.desc{
+    font-size: 1.2rem;
+}
+.item-type{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.item-type .img-container img{
+    width: 280px;
+}
+.item-type .img-content a{
+    font-size: 1rem;
+}
+
+.item-type .img-content h3{
+    font-size: 2.1rem;
+}
+
+/* .img-container{
+    width: 28%;
+} */
+/* ###########################testimonal styling############################### */
+#testimonial{
+    padding: 5rem 0rem;
+    background: rgb(236, 235, 235);
+}
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #555;
+    font-style: italic;
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.testimonial-container .checked{
+    color: #ff9529;
+
+}
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+}
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #444;
+}
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* ####################################### Contact page styling ############################ */
+#contact{
+    padding: 5rem 0;
+    background: rgb(226,226,226);
+}
+.contact-container{
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+}
+.contact-image {
+    width: 50%;
+}
+.contact-image img{
+    width: 100%;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+
+}
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+.form-container a{
+    font-size: 1.2rem
+}
+#footer h2{
+    font-size: 2rem;
+    color: #fff;
+    background: rgb(65,65,65);
+    font-weight: 500;
+    text-align: center;
+    padding: 3rem;
+}
+
+/* ############################# Media Queries ############################# */
+@media( max-width : 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+        .navbar-container input[type="checkbox"],
+        .navbar-container .hamburger-lines{
+            display: block;
+        }
+        .navbar-container{
+            display: block;
+            position: relative;
+            height: 64px;
+        }
+        .navbar-container input[type="checkbox"]{
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 40px;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            opacity: 0;
+
+        }
+        .navbar-container .hamburger-lines{
+            display: block;
+            height: 32px;
+            width: 40px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        .navbar-container .hamburger-lines .line{
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: #333;
+        }
+        .navbar-container .hamburger-lines .line1{
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+        }
+    
+        .navbar-container .hamburger-lines .line2{
+            transition: transform 0.4s ease-in-out;
+        }
+    
+        .navbar-container .hamburger-lines .line3{
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+        .navbar .menu-items{
+            padding-top: 100px;
+            background: #fff;
+            height: 100vh;
+            max-width: 300px;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: -50px;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 5px 0 10px 0 #aaa;
+            padding-left: 20px;
+        }
+        .navbar .menu-items li{
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .logo{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 3rem;
+
+        }
+        .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+            transform: translateX(0);
+        }
+        .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+            transform: rotate(45deg);
+        }
+        .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+            transform: scaleY(0)
+        }
+        .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+            transform: rotate(-45deg);
+        }
+        /* ######################### Food Category###################### */
+        .food-container{
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .food-type:not(:last-child){
+            margin-bottom: 3rem;
+        }
+        .food-type{
+            box-shadow: 5px 5px 10px 0 #aaa;
+        }
+        .img-container{
+            margin: 0;
+        }
+}
+/* ####################################### 500 px ############################### */
+@media(max-width:500px){
+    html{
+        font-size: 50%
+    }
+    .testimonial-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-menu-item{
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-menu-container  img{
+        margin: auto;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-image{
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* #########################landscape mode############################ */
+@media(orientation:landscape) and (max-height: 500px){
+    .showcase-area{
+        height: 50vmax;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up | Log In</title>
+    <link rel="stylesheet" href="css/sign_in.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+       <div class="title-text">
+          <div class="title login">
+             Account 
+          </div>
+          <div class="title signup">
+             Account
+          </div>
+       </div>
+       <div class="form-container">
+          <div class="slide-controls">
+             <input type="radio" name="slide" id="login" checked>
+             <input type="radio" name="slide" id="signup">
+             <label for="login" class="slide login">Login</label>
+             <label for="signup" class="slide signup">SignUp</label>
+             <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+             <form action="/login" method="post" class="login">
+                <div class="field">
+                  <input placeholder="Name" name="name" type="text">
+                </div>
+                <div class="field">
+                   <input placeholder="Password" name="password" type="password">
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input class="sub" type="submit" value="Log In">
+                </div>
+                <div class="signup-link">
+                   Don't Have Account? <a href="">Create A New</a>
+                </div>
+             </form>
+             <form action="/signup" method="post" >
+                <div class="field">
+					 	<input placeholder="Name" name="name" type="text">
+                </div>
+                <div class="field">
+						<input placeholder="Address" name="address" type="text">
+					 </div>
+                <div class="field">
+                   <input placeholder="Password" name="password" type="password">
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input class="sub" type="submit" value="Sign Up">
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+    <script src="javascript/sign_in.js"></script>
+  </body>
+</html>
